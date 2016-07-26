@@ -141,3 +141,10 @@ extension NSWindowController {
     self.dismissController(sender)
   }
 }
+
+extension NSApplication {
+  @available(*, deprecated, renamed: "activate(ignoringOtherApps:)")
+  @nonobjc func activateIgnoringOtherApps(_ flag: Bool) {
+    self.activate(ignoringOtherApps: flag)
+  }
+}
